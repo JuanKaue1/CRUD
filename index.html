@@ -1,0 +1,32 @@
+<form>
+    <input name="campoCriaPost" placeholder="Digie o seu post">
+    <button type="submit">Postar</button>
+</form>
+<ul class="listaDePosts"></ul>
+
+<script>//CRUD Creater, Read, Update & Delete
+    console.log('Olá pessoas! - Nivel 2');
+    console.log('#ConstruindoCRUDS');
+
+    // [Código de Front End: Web]
+    const $meuForm = document.querySelector('form');
+    console.log($meuForm);
+
+    $meuForm.addEventListener('submit', function criarPostController(infosDoEvento) {
+        infosDoEvento.preventDefault();
+        console.log('Estamos criando um post novo!')
+        const $campoCriaPost = document.querySelector('input[name="campoCriaPost"]');
+        const $listaDePosts = document.querySelector('.listaDePosts'); 
+
+        $listaDePosts.insertAdjacentHTML('afterbegin', `<li>${$campoCriaPost.value}</li>`)
+        $campoCriaPost.value = '';
+    })
+
+    // Elementos quardados em variaveis tem um $
+
+    // Linguagem Pura:
+    // - Cria variaveis
+    // - Sincronizar o conteúdo das variáveis com o HTML
+    // - Atualiza variáveis
+
+</script>
