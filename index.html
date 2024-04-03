@@ -1,32 +1,31 @@
-<form>
-    <input name="campoCriaPost" placeholder="Digie o seu post">
-    <button type="submit">Postar</button>
-</form>
-<ul class="listaDePosts"></ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">CRUD</h1>
+    <form id="crudForm" class="mb-3">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email">
+      </div>
+      <button type="submit" class="btn btn-primary mr-2">Add</button>
+      <button type="button" class="btn btn-secondary" id="clear">Clear</button>
+    </form>
+    <ul id="userList" class="list-group">
+    </ul>
+  </div>
 
-<script>//CRUD Creater, Read, Update & Delete
-    console.log('Olá pessoas! - Nivel 2');
-    console.log('#ConstruindoCRUDS');
-
-    // [Código de Front End: Web]
-    const $meuForm = document.querySelector('form');
-    console.log($meuForm);
-
-    $meuForm.addEventListener('submit', function criarPostController(infosDoEvento) {
-        infosDoEvento.preventDefault();
-        console.log('Estamos criando um post novo!')
-        const $campoCriaPost = document.querySelector('input[name="campoCriaPost"]');
-        const $listaDePosts = document.querySelector('.listaDePosts'); 
-
-        $listaDePosts.insertAdjacentHTML('afterbegin', `<li>${$campoCriaPost.value}</li>`)
-        $campoCriaPost.value = '';
-    })
-
-    // Elementos quardados em variaveis tem um $
-
-    // Linguagem Pura:
-    // - Cria variaveis
-    // - Sincronizar o conteúdo das variáveis com o HTML
-    // - Atualiza variáveis
-
-</script>
+  <script src="script.js"></script>
+</body>
+</html>
