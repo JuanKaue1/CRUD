@@ -12,7 +12,6 @@ This is a simple CRUD (Create, Read, Update, Delete) application implemented in 
 ## Technologies Used
 
 - **HTML:** Used to structure the web page.
-- **CSS:** Used for styling the application.
 - **JavaScript:** Used for implementing CRUD operations and dynamic interactions.
 - **Bootstrap:** Utilized for styling and layout components.
 
